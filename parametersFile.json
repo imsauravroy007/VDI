@@ -1,0 +1,111 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "_artifactsLocation": {
+      "value": "https://raw.githubusercontent.com/Azure/RDS-Templates/master/wvd-templates/"
+    },
+    "_artifactsLocationSasToken": {
+      "value": null
+    },
+    "rdshImageSource": {
+      "value": "Gallery"
+    },
+    "vmImageVhdUri": {
+      "value": null
+    },
+    "rdshGalleryImageSKU": {
+      "value": "Windows-10-Enterprise-multi-session-with-Office-365-ProPlus"
+    },
+    "rdshCustomImageSourceName": {
+      "value": null
+    },
+    "rdshCustomImageSourceResourceGroup": {
+      "value": null
+    },
+    "rdshNamePrefix": {
+      "value": "[take(toLower(resourceGroup().name), 10)]"
+    },
+    "rdshNumberOfInstances": {
+      "value": 1
+    },
+    "rdshVMDiskType": {
+      "value": "Premium_LRS"
+    },
+    "rdshVmSize": {
+      "value": "Standard_D4s_v3"
+    },
+    "enableAcceleratedNetworking": {
+      "value": null
+    },
+    "rdshUseManagedDisks": {
+      "value": true
+    },
+    "storageAccountResourceGroupName": {
+      "value": null
+    },
+    "domainToJoin": {
+      "value": "lntinfotech.com"
+    },
+    "existingDomainUPN": {
+      "value": null
+    },
+    "existingDomainPassword": {
+      "value": null
+    },
+    "ouPath": {
+      "value": null
+    },
+    "existingVnetName": {
+      "value": "LTI-GENWVD"
+    },
+    "newOrExistingVnet": {
+      "value": "existing"
+    },
+    "existingSubnetName": {
+      "value": "vm-subnet"
+    },
+    "virtualNetworkResourceGroupName": {
+      "value": "LTI-GENWVD-MGMT"
+    },
+    "rdBrokerURL": {
+      "value": "https://rdbroker.wvd.microsoft.com"
+    },
+    "existingTenantGroupName": {
+      "value": "Default Tenant Group"
+    },
+    "existingTenantName": {
+      "value": "GENIUS-DEV"
+    },
+    "hostPoolName": {
+      "value": "LTI-GENDEV-PYTHON"
+    },
+    "serviceMetadataLocation": {
+      "value": "United-States"
+    },
+    "enablePersistentDesktop": {
+      "value": null
+    },
+    "defaultDesktopUsers": {
+      "value": null
+    },
+    "tenantAdminUpnOrApplicationId": {
+      "value": null
+    },
+    "tenantAdminPassword": {
+      "value": null
+    },
+    "isServicePrincipal": {
+      "value": null
+    },
+    "aadTenantId": {
+      "value": null
+    },
+    "location": {
+      "value": "[resourceGroup().location]"
+    },
+    "createAvailabilitySet": {
+      "value": true
+    }
+  }
+}
